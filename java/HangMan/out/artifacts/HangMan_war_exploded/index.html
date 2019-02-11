@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="styles/index.css"/>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <h2>HangMan</h2>
+        </div>
+        <div class="word">
+            <p id="word_txt">message_txt</p>
+        </div>
+        <div class="letter">
+            <input type="text" id="input_letter" name="input_letter"/>
+            <input type="button" id="letter_btn"/>
+        </div>
+        <div class="message">
+            <p id="message_txt">message_txt</p>
+        </div>
+        <div class="alphabet">
+            <h2>alphabet</h2>
+        </div>
+        <div class="picture">
+            <p id="fails_txt">fails_txt</p>
+            <img id="fails_img" src="resources/0.jpg"/>
+        </div>
+        <div class="menu">
+            <h2>menu</h2>
+            <button id="newword_btn" disabled="true">New Word</button>
+            <button id="giveup_btn"> Give Up </button>
+            <button id="hint_btn"> Hint </button>
+            <button id="help_btn"> Help </button>
+        </div>
+        <div class="footer">
+            (c) Zdes Byl Vasya, 2019
+        </div>
+    </div>
+    <script src="js/hangman.js"></script>
+</body>
+</html>
