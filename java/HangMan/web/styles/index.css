@@ -4,7 +4,7 @@
 html, body{
     margin:0;
     padding:0;
-}
+ }
 .grid-container {
     height:100vh;
     display: grid;
@@ -13,35 +13,74 @@ html, body{
                          "picture"
                          "message"
                          "letter"
-                         "alphabet"
                          "menu"
                          "footer";
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 50px 1fr 100px 50px 100px 50px 50px;
+    grid-template-rows: 50px 50px 1fr 100px 50px 50px 50px;
 }
 @media screen and (min-width: 468px) {
 
     .grid-container {
         height:100vh;
         display: grid;
-        grid-template-areas: "header header header header header"
-                             ". word word word ."
-                             ". alphabet picture menu ."
-                             ". message message message ."
-                             ". letter letter letter ."
-                             "footer footer footer footer footer";
-        grid-template-columns: 400px 300px 1fr 300px 400px;
-        grid-template-rows: 150px 100px 3fr 1fr 1fr 150px;
+        grid-template-areas: "sidebar1 . . sidebar2"
+                             "sidebar1 header header sidebar2"
+                             "sidebar1 word word sidebar2"
+                             "sidebar1 picture letter sidebar2"
+                             "sidebar1 message message sidebar2"
+                             "sidebar1 menu menu sidebar2"
+                             "sidebar1 footer footer sidebar2"
+                             "sidebar1 . . sidebar2";
+        grid-template-columns: 2fr 300px minmax(100px, 1fr) 2fr;
+        grid-template-rows: 2fr 30px 100px 300px minmax(100px, 1fr) 50px 20px 2fr;
     }
 }
-.header { grid-area: header; background-color: #bbb;  vertical-align: center;}
-.word { grid-area: word; background-color: #aaa; font-size: xx-large;}
-.picture { grid-area: picture; background-color: white;}
-.message { grid-area: message; background-color: #FFF; font-size: large;}
-.letter { grid-area: letter; background-color: #aaa; font-size: xx-large;}
-.alphabet { grid-area: alphabet; background-color: #ccc; }
-.menu { grid-area: menu; background-color: #ccc; }
-.footer { grid-area: footer; background-color: #bbb; font-size: small; text-align:center;  vertical-align: middle;}
+.header { grid-area: header;
+          background-color: green;
+          color: lightgreen;
+          font-size: small;
+          text-align:center;
+}
+.word { grid-area: word;
+        background-color: greenyellow;
+        color: green;
+        font-size: xx-large;
+        text-align: justify;
+}
+.picture { grid-area: picture;
+           background-color: lightgreen;
+           outline: 2px solid green;
+           margin: 2px;
+}
+.picture img {
+    outline: 2px solid green;
+    margin: 20px;
+}
+.message { grid-area: message;
+           background-color: greenyellow;
+           color: green;
+           font-size: large;
+           outline: 2px solid green;
+           margin: 2px;
+}
+.letter { grid-area: letter;
+          background-color: lightgreen;
+          font-size: xx-large;
+          outline: 2px solid green;
+          margin: 2px;
+
+}
+.menu { grid-area: menu;
+        background-color: #ccc;
+}
+.footer { grid-area: footer;
+          background-color: green;
+          color: lightgreen;
+          font-size: small;
+          text-align:center;
+}
+.sidebar1 { grid-area: sidebar1; background-color: #aacc00; font-size: small; text-align:center;  vertical-align: middle;}
+.sidebar2 { grid-area: sidebar2; background-color: #aacc00; font-size: small; text-align:center;  vertical-align: middle;}
 h2, h3, p{
     text-align:center; vertical-align: center;
 }
